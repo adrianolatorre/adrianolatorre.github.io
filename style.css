@@ -1,0 +1,138 @@
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.375;
+  margin: 0;
+}
+
+/* ::selection {
+    background-color: gold;
+    color: #000;
+  } */
+
+img {
+  border: none;
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  padding: 4rem 1rem 0 1rem;
+}
+
+main {
+  margin: 4rem 1rem 4rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+header h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.225;
+}
+
+section h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+  font-size: clamp(3rem, 7.25vw, 6rem);
+  font-weight: 900;
+  letter-spacing: clamp(-4px, -.3vw, -2px);
+  line-height: 1;
+}
+
+section p {
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+header h1 {
+  animation-delay: .25s;
+}
+
+header h2 {
+  animation-delay: .375s;
+}
+
+section h1 {
+  animation-delay: .625s;
+}
+
+section p {
+  animation-delay: .75s;
+}
+
+@keyframes fi {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fi {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fi;
+  animation-timing-function: ease-in;
+}
+
+@media all and (min-width: 49em) {
+  header {
+    padding: 7rem 4rem 0 4rem;
+    max-width: 75rem;
+  }
+  main {
+    margin: 7rem 4rem 0 4rem;
+    max-width: 75rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+  header h2 {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+  section p {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    max-width: 37rem;
+  }
+  .breakout {
+    display: none;
+  }
+}

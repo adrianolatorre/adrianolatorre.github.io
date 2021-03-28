@@ -18,12 +18,8 @@ body {
   margin: 0;
 }
 
-/* ::selection {
-    background-color: gold;
-    color: #000;
-  } */
-
-img {
+img,
+video {
   border: none;
   display: block;
   max-width: 100%;
@@ -44,7 +40,11 @@ header {
 }
 
 main {
-  margin: 4rem 1rem 4rem 1rem;
+  margin: 4rem 1rem;
+}
+
+footer {
+  margin: 4rem 1rem;
 }
 
 header h1 {
@@ -78,6 +78,20 @@ section p {
   line-height: 1.25;
 }
 
+.portfolio {
+  margin-top: 4rem;
+}
+
+.portfolio img,
+.portfolio video {
+  border-radius: 4px;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+.portfolio img:first-child {
+  margin-top: 0;
+}
+
 header h1 {
   animation-delay: .25s;
 }
@@ -92,6 +106,10 @@ section h1 {
 
 section p {
   animation-delay: .75s;
+}
+
+section {
+  animation-delay: .875s;
 }
 
 @keyframes fi {
@@ -110,13 +128,31 @@ section p {
   animation-timing-function: ease-in;
 }
 
+.m {
+  display: block;
+}
+
+.d {
+  display: none;
+}
+
 @media all and (min-width: 49em) {
+  .m {
+    display: none;
+  }
+  .d {
+    display: block;
+  }
   header {
     padding: 7rem 4rem 0 4rem;
     max-width: 75rem;
   }
   main {
     margin: 7rem 4rem 0 4rem;
+    max-width: 75rem;
+  }
+  footer {
+    margin: 7rem 4rem 4rem;
     max-width: 75rem;
   }
   header h1 {
@@ -134,5 +170,9 @@ section p {
   }
   .breakout {
     display: none;
+  }
+  .portfolio {
+    columns: 3;
+    column-gap: 1rem;
   }
 }

@@ -3,6 +3,30 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(Inter-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(Inter-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(Inter-Black.woff2) format('woff2');
+}
+
 html {
   font-size: 100%;
   scroll-behavior: smooth;
@@ -35,6 +59,17 @@ a:hover {
   text-decoration: underline;
 }
 
+ul {
+  padding: 0;
+}
+
+ul li {
+  font-variant-numeric: tabular-nums;
+  list-style: none;
+  margin-bottom: .375em;
+  padding: 0;
+}
+
 header {
   padding: 4rem 1rem 0 1rem;
 }
@@ -47,7 +82,8 @@ footer {
   margin: 4rem 1rem;
 }
 
-header h1 {
+header h1,
+h3 {
   margin: 0;
   padding: 0;
   font-size: 1.25rem;
@@ -155,7 +191,8 @@ section {
     margin: 7rem 4rem 4rem;
     max-width: 75rem;
   }
-  header h1 {
+  header h1,
+  h3 {
     font-size: 1.5rem;
     line-height: 1.25;
   }

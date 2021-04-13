@@ -79,7 +79,19 @@ main {
 }
 
 footer {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
   margin: 4rem 1rem;
+}
+
+footer,
+footer a {
+  color: #666;
+}
+
+footer a:hover {
+  color: #fff;
 }
 
 header h1,
@@ -109,13 +121,15 @@ section h1 {
   line-height: 1;
 }
 
-section p {
-  font-size: 1.25rem;
+section p,
+section ul,
+section li {
+  font-size: 1rem;
   line-height: 1.25;
 }
 
 .portfolio {
-  margin-top: 4rem;
+  margin: 4rem 0 8rem;
 }
 
 .portfolio img,
@@ -188,7 +202,8 @@ section {
     max-width: 75rem;
   }
   footer {
-    margin: 7rem 4rem 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 8rem 4rem;
     max-width: 75rem;
   }
   header h1,
@@ -200,7 +215,13 @@ section {
     font-size: 1.25rem;
     line-height: 1.25;
   }
-  section p {
+  section p,
+  section ul,
+  section li {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  .profile p {
     font-size: 1.5rem;
     line-height: 1.25;
     max-width: 37rem;
@@ -211,5 +232,8 @@ section {
   .portfolio {
     columns: 3;
     column-gap: 1rem;
+  }
+  .about {
+    grid-column: span 2;
   }
 }

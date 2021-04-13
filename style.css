@@ -80,7 +80,7 @@ main {
 
 footer {
   display: grid;
-  gap: 3rem;
+  gap: 2rem;
   grid-template-columns: 1fr;
   margin: 4rem 1rem;
 }

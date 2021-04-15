@@ -143,23 +143,23 @@ section li {
 }
 
 header h1 {
-  animation-delay: .25s;
+  animation-delay: .4s;
 }
 
 header h2 {
-  animation-delay: .375s;
+  animation-delay: .325s;
 }
 
 section h1 {
-  animation-delay: .625s;
+  animation-delay: .25s;
 }
 
 section p {
-  animation-delay: .75s;
+  animation-delay: .375s;
 }
 
 section {
-  animation-delay: .875s;
+  animation-delay: .5s;
 }
 
 @keyframes fi {
@@ -172,7 +172,7 @@ section {
 }
 
 .fi {
-  animation-duration: 1s;
+  animation-duration: .625s;
   animation-fill-mode: both;
   animation-name: fi;
   animation-timing-function: ease-in;

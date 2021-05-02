@@ -90,6 +90,10 @@ footer a {
   color: #666;
 }
 
+footer h3 {
+  color: #bbb;
+}
+
 footer a:hover {
   color: #fff;
 }

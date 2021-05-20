@@ -33,13 +33,18 @@ html {
 }
 
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.375;
   margin: 0;
+}
+
+body.home {
+  background-color: #000;
+  color: #fff;
 }
 
 img,
@@ -50,9 +55,14 @@ video {
 }
 
 a {
-  color: #fff;
+  color: #000;
   font-weight: 700;
   text-decoration: none;
+}
+
+body.home header a,
+body.home main a {
+  color: #fff;
 }
 
 a:hover {
@@ -79,22 +89,25 @@ main {
 }
 
 footer {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr;
   margin: 4rem 1rem;
 }
 
-footer,
-footer a {
+footer.home {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+footer.home,
+footer.home a {
   color: #666;
 }
 
-footer h3 {
+footer.home h3 {
   color: #bbb;
 }
 
-footer a:hover {
+footer.home a:hover {
   color: #fff;
 }
 
@@ -206,9 +219,11 @@ section {
     max-width: 75rem;
   }
   footer {
-    grid-template-columns: repeat(3, 1fr);
     margin: 8rem 4rem;
     max-width: 75rem;
+  }
+  footer.home {
+    grid-template-columns: repeat(3, 1fr);
   }
   header h1,
   h3 {

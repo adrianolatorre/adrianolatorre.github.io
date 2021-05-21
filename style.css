@@ -87,6 +87,12 @@ header {
 main {
   margin: 4rem 1rem;
 }
+main.reading,
+footer.reading {
+  display: grid;
+  gap: 6rem;
+  grid-template-columns: 1fr;
+}
 
 footer {
   margin: 4rem 1rem;
@@ -218,6 +224,10 @@ section {
     margin: 7rem 4rem 0 4rem;
     max-width: 75rem;
   }
+  main.reading,
+  footer.reading {
+    grid-template-columns: 6fr 4fr;
+  }
   footer {
     margin: 8rem 4rem;
     max-width: 75rem;
@@ -254,5 +264,8 @@ section {
   }
   .about {
     grid-column: span 2;
+  }
+  .links {
+    grid-row: span 2;
   }
 }

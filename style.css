@@ -10,17 +10,12 @@ html {
 
 body {
   background-color: #fff;
-  color: #000;
+  color: #400;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.375;
   margin: 0;
-}
-
-body.home {
-  background-color: #000;
-  color: #fff;
 }
 
 img,
@@ -31,21 +26,24 @@ video {
 }
 
 a {
-  color: #000;
+  color: #400;
   font-weight: 700;
   text-decoration: none;
-}
-
-body.home header a,
-body.home main a {
-  color: #fff;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-ul {
+.profile a {
+  color: #D32275;
+}
+
+footer a:hover {
+  color: #D32275;
+}
+
+/*ul {
   padding: 0;
 }
 
@@ -54,33 +52,37 @@ ul li {
   list-style: none;
   margin-bottom: .375em;
   padding: 0;
-}
+}*/
 
 header {
   padding: 4rem 1rem 0 1rem;
 }
 
 main {
-  margin: 4rem 1rem;
-}
-main.reading,
-footer.reading {
-  display: grid;
-  gap: 6rem;
-  grid-template-columns: 1fr;
+  margin: 4rem 1rem 8rem;
 }
 
 footer {
   margin: 4rem 1rem;
 }
 
-footer.home {
+.title {
+/*  background: url('code.mask.png') 48% 64% no-repeat fixed;*/
+/*  background: linear-gradient(180deg,
+    rgba(50,0,0,1) 0%,
+    rgba(255,20,147,1) 96%,
+    rgba(50,0,0,1) 100%) no-repeat fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+*/}
+
+/*footer.home {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
-}
+}*/
 
-footer.home,
+/*footer.home,
 footer.home a {
   color: #666;
 }
@@ -91,7 +93,7 @@ footer.home h3 {
 
 footer.home a:hover {
   color: #fff;
-}
+}*/
 
 header h1,
 h3 {
@@ -112,7 +114,7 @@ header h2 {
 
 section h1 {
   margin: 0;
-  padding: 0;
+  padding: 0 0 .125em 0;
   font-size: 3rem;
   font-size: clamp(3rem, 7.25vw, 6rem);
   font-weight: 900;
@@ -127,34 +129,17 @@ section li {
   line-height: 1.5;
 }
 
-.portfolio {
-  margin: 4rem 0 8rem;
-}
-
-.portfolio img,
-.portfolio video {
-  border-radius: 4px;
-  margin-top: 1rem;
-  overflow: hidden;
-}
-.portfolio img:first-child {
-  margin-top: 0;
-}
-
-header h1 {
-  animation-delay: .4s;
-}
-
+header h1,
 header h2 {
-  animation-delay: .325s;
-}
-
-section h1 {
   animation-delay: .25s;
 }
 
+section h1 {
+  animation-delay: .125s;
+}
+
 section p {
-  animation-delay: .375s;
+  animation-delay: .25s;
 }
 
 section {
@@ -171,46 +156,28 @@ section {
 }
 
 .fi {
-  animation-duration: .625s;
+  animation-duration: 1s;
   animation-fill-mode: both;
   animation-name: fi;
   animation-timing-function: ease-in;
 }
 
-.m {
-  display: block;
-}
-
-.d {
-  display: none;
-}
-
 @media all and (min-width: 49em) {
-  .m {
-    display: none;
-  }
-  .d {
-    display: block;
-  }
   header {
-    padding: 7rem 4rem 0 4rem;
+    padding: 4rem 4rem 0 4rem;
     max-width: 75rem;
   }
   main {
-    margin: 7rem 4rem 0 4rem;
+    margin: 4rem;
     max-width: 75rem;
-  }
-  main.reading,
-  footer.reading {
-    grid-template-columns: 6fr 4fr;
   }
   footer {
-    margin: 8rem 4rem;
+    margin: 2rem 4rem;
     max-width: 75rem;
   }
-  footer.home {
-    grid-template-columns: repeat(3, 1fr);
-  }
+/*  footer.home {
+    grid-template-columns: repeat(2, 1fr);
+  }*/
   header h1,
   h3 {
     font-size: 1.5rem;
@@ -229,19 +196,6 @@ section {
   .profile p {
     font-size: 1.5rem;
     line-height: 1.25;
-    max-width: 37rem;
-  }
-  .breakout {
-    display: none;
-  }
-  .portfolio {
-    columns: 3;
-    column-gap: 1rem;
-  }
-  .about {
-    grid-column: span 2;
-  }
-  .links {
-    grid-row: span 2;
+    max-width: 48rem;
   }
 }

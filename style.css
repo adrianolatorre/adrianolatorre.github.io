@@ -90,7 +90,7 @@ a:visited {
 
 header {
   display: grid;
-  font: var(--font125);
+  font: var(--font100);
   font-weight: var(--fw5);
   grid-template-columns: 1fr;
   margin: 1rem 1rem 9rem;

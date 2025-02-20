@@ -158,12 +158,12 @@ main {
 }
 
 .about h1 {
-  font: var(--font200);
+  font: var(--font150);
   font-weight: var(--fw6);
 }
 
 .about p {
-  font: var(--font150);
+  font: var(--font100);
   font-weight: var(--fw5);
 }
 
@@ -181,7 +181,7 @@ main {
 }
 
 .links {
-  font: var(--font150);
+  font: var(--font100);
   font-weight: var(--fw5);
   margin: 1rem 0 9rem;
   padding: 2rem 1rem;

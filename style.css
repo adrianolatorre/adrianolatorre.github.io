@@ -93,7 +93,7 @@ header {
   font: var(--font100);
   font-weight: var(--fw5);
   grid-template-columns: 1fr;
-  margin: 2rem 1rem 9rem;
+  margin: 2rem 1rem 6rem;
 }
 
 main {

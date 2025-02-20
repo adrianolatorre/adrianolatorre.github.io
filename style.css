@@ -1,6 +1,37 @@
 
 *,*::before,*::after {
   box-sizing: border-box;
+/*  background-color: rgba(255, 0, 0, .1);*/
+}
+
+:root {
+  --font075: .75rem/1.25 'Manrope', serif;
+  --font100: 1rem/1.375 'Manrope', serif;
+  --font125: 1.25rem/1.375 'Manrope', serif;
+  --font150: 1.5rem/1.375 'Manrope', serif;
+  --font200: 2rem/1.5 'Manrope', serif;
+  --font300: 3rem/1.375 'Manrope', serif;
+  --fw5: 500;
+  --fw6: 600;
+
+  --black-bg: #222;
+  --black-fg: #444;
+  --grey: #888;
+  --blue: #07f;
+  --purple: #70f;
+  --yellow: #fc0;
+  --pale: rgba(255, 204, 0, .24);
+  --paleblue: rgba(0, 120, 255, .1);
+  --white: #fff;
+  --palewhite: rgba(255, 255, 255, .1);
+  --fullwhite: rgba(255, 255, 255, 0);
+
+  --level: #48BF58;
+  --comms: #323069;
+  --airplane: #0487C8;
+  --caixabank: #00B5FA;
+  --finloop: #4EB3F7;
+  --spines: #4D342E;
 }
 
 html {
@@ -9,12 +40,10 @@ html {
 }
 
 body {
-  background-color: #fff;
-  color: #400;
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.375;
+  background-color: var(--white);
+  color: var(--black-fg);
+  font: var(--font150);
+  font-weight: var(--fw5);
   margin: 0;
 }
 
@@ -25,23 +54,236 @@ video {
   max-width: 100%;
 }
 
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font: var(--font075);
+  font-weight: var(--fw5);
+  margin: .5rem 0 1rem;
+}
+
+figcaption span {
+  font: var(--font100);
+  font-weight: var(--fw6);
+}
+
 a {
-  color: #400;
-  font-weight: 700;
-  text-decoration: none;
+  background-color: var(--fullwhite);
+  border-radius: 2px;
+  color: var(--blue);
+  text-decoration-thickness: 1px;
+  transition: all .24s ease-out;
 }
 
 a:hover {
-  text-decoration: underline;
+  background-color: var(--paleblue);
+  text-decoration-color: var(--palewhite);
 }
 
-.profile a {
-  color: #D32275;
+a:visited {
+  background-color: var(--purple);
+  text-decoration-color: var(--purple);
+  color: var(--purple);
 }
 
-footer a:hover {
-  color: #D32275;
+header {
+  display: grid;
+  font: var(--font125);
+  font-weight: var(--fw5);
+  grid-template-columns: 1fr;
+  margin: 1rem 1rem 9rem;
 }
+
+main {
+  margin: 0 1rem;
+}
+
+.grey {
+  color: var(--grey);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 81.5rem;
+  }
+
+.work {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  margin-top: 1rem;
+}
+
+.box {
+  color: var(--grey);
+  max-width: 40rem;
+}
+
+.level-c {
+  color: var(--level);
+}
+
+.comms-c {
+  color: var(--comms);
+}
+
+.airplane-c {
+  color: var(--airplane);
+}
+
+.caixabank-c {
+  color: var(--caixabank);
+}
+
+.finloop-c {
+  color: var(--finloop);
+}
+
+.spines-c {
+  color: var(--spines);
+}
+
+.about {
+  background-color: var(--blue);
+  box-shadow: inset 0px 0px 128px rgba(0, 0, 0, .2);
+  color: var(--white);
+  margin-top: 1rem;
+  padding: 2rem 1rem;
+}
+
+.about h1 {
+  font: var(--font200);
+  font-weight: var(--fw6);
+}
+
+.about p {
+  font: var(--font150);
+  font-weight: var(--fw5);
+}
+
+.about a {
+  background-color: var(--fullwhite);
+  border-radius: 2px;
+  color: var(--white);
+  text-decoration-thickness: 1px;
+  transition: all .24s ease-out;
+}
+
+.about a:hover, .about a:visited {
+  background-color: var(--palewhite);
+  text-decoration-color: var(--palewhite);
+}
+
+.links {
+  font: var(--font150);
+  font-weight: var(--fw5);
+  margin: 1rem 0 9rem;
+  padding: 2rem 1rem;
+}
+
+@media all and (min-width: 42rem) {
+  header {
+    font: var(--font150);
+    font-weight: var(--fw5);
+    grid-template-columns: 1fr auto;
+    margin: 1.5rem 1.5rem 9rem;
+  }
+
+  main {
+    margin: 0 1.5rem;
+  }
+
+  figcaption {
+    font: var(--font100);
+    font-weight: var(--fw5);
+    margin: .5rem 0 1rem;
+  }
+
+  figcaption span {
+    font: var(--font125);
+    font-weight: var(--fw6);
+  }
+
+  .contact {;
+    text-align: right;
+  }
+
+  .work {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .about {
+    margin-top: 1.5rem;
+    padding: 6rem 4rem;
+  }
+
+  .about h1 {
+    font: var(--font300);
+    font-weight: var(--fw6);
+  }
+
+  .about p {
+    font: var(--font200);
+  font-weight: var(--fw5);
+}
+
+  .links {
+    font: var(--font200);
+    font-weight: var(--fw5);
+    margin: 1.5rem 0 9rem;
+    padding: 6rem 4rem;
+  }
+}
+
+/*  footer.home {
+grid-template-columns: repeat(2, 1fr);
+}*/
+
+/* LEVEL airlines
+position: relative;
+width: 640px;
+height: 512px;
+background: linear-gradient(135deg, #48BF58 0%, #358C41 100%);
+box-shadow: inset 0px 0px 160px rgba(0, 0, 0, 0.2);
+
+/* LEVEL comms 
+background: linear-gradient(135deg, #323069 0%, #191936 100%);
+
+/* Airplane Solutions 
+background: linear-gradient(135deg, #0487C8 0%, #036494 100%);
+
+/* CaixaBank Now 
+background: linear-gradient(135deg, #00B5FA 0%, #0090C7 100%);
+
+/* Finloop 
+background: linear-gradient(135deg, #4EB3F7 0%, #46A1DE 100%);
+
+/* Spines 
+background: #fff;
+
+/* Figma 
+position: relative;
+width: 640px;
+height: 244px;
+background: #FFCC00;
+
+/* About 
+position: relative;
+width: 1304px;
+height: 644px;
+background: #0077FF;
+box-shadow: inset 0px 0px 128px rgba(0, 0, 0, 0.2);
+
+
+
 
 /*ul {
   padding: 0;
@@ -54,35 +296,23 @@ ul li {
   padding: 0;
 }*/
 
-header {
-  padding: 4rem 1rem 0 1rem;
-}
-
-main {
-  margin: 4rem 1rem 8rem;
-}
-
-footer {
-  margin: 4rem 1rem;
-}
-
-.title {
-/*  background: url('code.mask.png') 48% 64% no-repeat fixed;*/
-/*  background: linear-gradient(180deg,
+/*.title {
+  background: url('code.mask.png') 48% 64% no-repeat fixed;
+  background: linear-gradient(180deg,
     rgba(50,0,0,1) 0%,
     rgba(255,20,147,1) 96%,
     rgba(50,0,0,1) 100%) no-repeat fixed;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-*/}
+}
 
-/*footer.home {
+footer.home {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
-}*/
+}
 
-/*footer.home,
+footer.home,
 footer.home a {
   color: #666;
 }
@@ -95,16 +325,7 @@ footer.home a:hover {
   color: #fff;
 }*/
 
-header h1,
-h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.25;
-}
-
-header h2 {
+/*header h2 {
   margin: 0;
   padding: 0;
   font-size: 1.125rem;
@@ -120,16 +341,9 @@ section h1 {
   font-weight: 900;
   letter-spacing: clamp(-4px, -.3vw, -2px);
   line-height: 1;
-}
+}*/
 
-section p,
-section ul,
-section li {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-header h1,
+/*header h1,
 header h2 {
   animation-delay: .25s;
 }
@@ -160,42 +374,4 @@ section {
   animation-fill-mode: both;
   animation-name: fi;
   animation-timing-function: ease-in;
-}
-
-@media all and (min-width: 49em) {
-  header {
-    padding: 4rem 4rem 0 4rem;
-    max-width: 75rem;
-  }
-  main {
-    margin: 4rem;
-    max-width: 75rem;
-  }
-  footer {
-    margin: 2rem 4rem;
-    max-width: 75rem;
-  }
-/*  footer.home {
-    grid-template-columns: repeat(2, 1fr);
-  }*/
-  header h1,
-  h3 {
-    font-size: 1.5rem;
-    line-height: 1.25;
-  }
-  header h2 {
-    font-size: 1.25rem;
-    line-height: 1.25;
-  }
-  section p,
-  section ul,
-  section li {
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-  .profile p {
-    font-size: 1.5rem;
-    line-height: 1.25;
-    max-width: 48rem;
-  }
-}
+}*/

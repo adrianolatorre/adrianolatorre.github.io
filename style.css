@@ -11,8 +11,18 @@
   --font150: 1.5rem/1.375 'Manrope', serif;
   --font200: 2rem/1.5 'Manrope', serif;
   --font300: 3rem/1.375 'Manrope', serif;
+  --ff: 'Manrope', serif;
+  --fs075: .75rem;
+  --fs100: 1rem;
+  --fs125: 1.25rem;
+  --fs150: 1.5rem;
+  --fs200: 2rem;
+  --fs300: 3rem;
   --fw5: 500;
   --fw6: 600;
+  --lh125: 1.25;
+  --lh137: 1.375;
+  --lh150: 1.5;
 
   --black-bg: #222;
   --black-fg: #444;
@@ -42,7 +52,9 @@ html {
 body {
   background-color: var(--white);
   color: var(--black-fg);
-  font: var(--font150);
+  line-height: var(--lh137);
+  font-family: var(--ff);
+  font-size: var(--fs150);
   font-weight: var(--fw5);
   margin: 0;
 }
@@ -59,13 +71,19 @@ figure {
 }
 
 figcaption {
-  font: var(--font075);
+  line-height: var(--lh125);
+  font-family: var(--ff);
+/*  font-size: var(--fs075);*/
+  font-size: clamp(var(--fs075), 1.5vw + .01rem, var(--fs100));
   font-weight: var(--fw5);
   margin: .5rem 0 1rem;
 }
 
 figcaption span {
-  font: var(--font100);
+  line-height: var(--lh137);
+  font-family: var(--ff);
+/*  font-size: var(--fs100);*/
+  font-size: clamp(var(--fs100), 2vw + .01rem, var(--fs125));
   font-weight: var(--fw6);
 }
 
@@ -90,7 +108,10 @@ a:visited {
 
 header {
   display: grid;
-  font: var(--font100);
+  line-height: var(--lh137);
+  font-family: var(--ff);
+/*  font-size: var(--fs100);*/
+  font-size: clamp(var(--fs100), 2.5vw + .01rem, var(--fs150));
   font-weight: var(--fw5);
   grid-template-columns: 1fr;
   margin: 2rem 1rem 6rem;
@@ -109,9 +130,9 @@ main {
 }
 
 .container {
-    margin: 0 auto;
-    max-width: 81.5rem;
-  }
+  margin: 0 auto;
+  max-width: 81.5rem;
+}
 
 .work {
   display: grid;
@@ -158,12 +179,18 @@ main {
 }
 
 .about h1 {
-  font: var(--font150);
+  line-height: var(--lh137);
+  font-family: var(--ff);
+/*  font-size: var(--fs150);*/
+  font-size: clamp(var(--fs150), 5vw + .01rem, var(--fs300));
   font-weight: var(--fw6);
 }
 
 .about p {
-  font: var(--font100);
+  line-height: var(--lh137);
+  font-family: var(--ff);
+/*  font-size: var(--fs100);*/
+  font-size: clamp(var(--fs100), 3.5vw + .01rem, var(--fs200));
   font-weight: var(--fw5);
 }
 
@@ -181,7 +208,10 @@ main {
 }
 
 .links {
-  font: var(--font100);
+  line-height: var(--lh137);
+  font-family: var(--ff);
+/*  font-size: var(--fs100);*/
+  font-size: clamp(var(--fs100), 3.5vw + .01rem, var(--fs200));
   font-weight: var(--fw5);
   margin: 1rem 0 9rem;
   padding: 2rem 1rem;
@@ -189,8 +219,7 @@ main {
 
 @media all and (min-width: 42rem) {
   header {
-    font: var(--font150);
-    font-weight: var(--fw5);
+/*    font-size: var(--fs150);*/
     grid-template-columns: 1fr auto;
     margin: 1.5rem 1.5rem 9rem;
   }
@@ -200,14 +229,12 @@ main {
   }
 
   figcaption {
-    font: var(--font100);
-    font-weight: var(--fw5);
-    margin: .5rem 0 1rem;
+    line-height: var(--lh137);
+/*    font-size: var(--fs100);*/
   }
 
   figcaption span {
-    font: var(--font125);
-    font-weight: var(--fw6);
+/*    font-size: var(--fs125);*/
   }
 
   .contact {;
@@ -226,18 +253,17 @@ main {
   }
 
   .about h1 {
-    font: var(--font300);
-    font-weight: var(--fw6);
+/*    font-size: var(--fs300);*/
   }
 
   .about p {
-    font: var(--font200);
-  font-weight: var(--fw5);
-}
+    line-height: var(--lh150);
+/*    font-size: var(--fs200);*/
+  }
 
   .links {
-    font: var(--font200);
-    font-weight: var(--fw5);
+    line-height: var(--lh150);
+/*    font-size: var(--fs200);*/
     margin: 1.5rem 0 9rem;
     padding: 6rem 4rem;
   }
